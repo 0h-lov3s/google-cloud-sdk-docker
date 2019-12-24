@@ -11,13 +11,13 @@ The :latest tag of this image is Debian-based and includes default command line 
 To use this image, pull from Container Registry and then run the following command:
 
 ```
-docker pull customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master
+docker pull 0hlov3s/google-sdk-terraform-alpine
 ```
 
 Verify the install
 
 ```
-docker run customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master gcloud version
+docker run 0hlov3s/google-sdk-terraform-alpine gcloud version
 ```
 
 ### Authentication
@@ -25,17 +25,17 @@ docker run customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master
 You can Autheticate by running:
 
 ```
-docker run -ti --name gcloud-config customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master gcloud auth login
+docker run -ti --name gcloud-config 0hlov3s/google-sdk-terraform-alpine gcloud auth login
 ```
 Once you authenticate successfully, credentials are preserved in the volume of the gcloud-config container.
 But since we want to user terraform, we will mount the key.json to /work/.creds
 ```
-docker run -v key.json:/work/.creds customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master
+docker run -v key.json:/work/.creds 0hlov3s/google-sdk-terraform-alpine
 ```
 
 ### Terraform Usage
 
 A full terraform plan or apply will be done by:
 ```
-docker run -v key.json:/work/.creds -v terraform-folder:/work customer-cloud-docker-general.psmanaged.com/plusserver/gcp-dev:master terraform plan
+docker run -v key.json:/work/.creds -v terraform-folder:/work 0hlov3s/google-sdk-terraform-alpine terraform plan
 ```
