@@ -4,7 +4,7 @@
 
 This is Docker image for the [Google Cloud SDK](https://cloud.google.com/sdk/) and [Terraform](https://www.terraform.io/docs/providers/google/index.html).
 
-The :latest tag of this image is Debian-based and includes default command line tools of Google Cloud SDK (gcloud, gsutil, bq) as well as all [additional components](https://cloud.google.com/sdk/downloads#apt-get) and Terraform.
+The :latest tag of this image is Alpine-based and includes default command line tools of Google Cloud SDK (gcloud, gsutil, bq) as well as all [additional components](https://cloud.google.com/sdk/downloads#apt-get) and Terraform.
 
 ## Usage
 
