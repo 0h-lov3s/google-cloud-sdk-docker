@@ -55,4 +55,4 @@ RUN apk --no-cache add --update $PACKAGES && \
 VOLUME ["/root/.config", "/root/.kube", "/work", "/work/.creds"]
 WORKDIR /work
 
-CMD ["/bin/bash"]%
+CMD ["/bin/bash"]
