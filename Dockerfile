@@ -49,7 +49,7 @@ RUN apk --no-cache add --update $PACKAGES && \
     gcloud config set compute/region europe-west3 && \
     gcloud config set compute/region europe-west3 && \
     gcloud --version && \
-    kubectl version --client && \
+    kubectl version --client
 
 
 VOLUME ["/root/.config", "/root/.kube", "/work", "/work/.creds"]
