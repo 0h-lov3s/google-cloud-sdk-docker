@@ -24,7 +24,7 @@ ARG PACKAGES="bash \
     make \
     python3 \
     python3-dev \
-    py-crcmod \
+    py3-crcmod \
     py3-cryptography \
     openssh-client \
     terraform \
