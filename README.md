@@ -1,6 +1,6 @@
 # google-cloud-sdk-docker
 
-[![Build Status](https://travis-ci.com/0h-lov3s/google-cloud-sdk-docker.svg)](https://travis-ci.com/0h-lov3s/google-cloud-sdk-docker)
+[![Build Status](https://travis-ci.com/0hlov3/google-cloud-sdk-docker.svg?branch=master)](https://travis-ci.com/0hlov3/google-cloud-sdk-docker)
 
 This is Docker image for the [Google Cloud SDK](https://cloud.google.com/sdk/) and [Terraform](https://www.terraform.io/docs/providers/google/index.html).
 
