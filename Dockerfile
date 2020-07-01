@@ -1,12 +1,12 @@
 #
 # Container to use Googles Cloud SDK
 #
+FROM docker:19.03.11 as static-docker-source
 
-FROM docker:17.12.0-ce as static-docker-source
-
-FROM alpine:3.10
-ARG CLOUD_SDK_VERSION=275.0.0
+FROM alpine:3.11
+ARG CLOUD_SDK_VERSION=299.0.0
 ENV CLOUD_SDK_VERSION=$CLOUD_SDK_VERSION
+ENV CLOUDSDK_PYTHON=python3
 
 LABEL MAINTAINER="0hlov3s" \
       description="Container to Deploy into GCP"
@@ -46,8 +46,6 @@ RUN apk --no-cache add --update $PACKAGES && \
     gcloud config set core/disable_usage_reporting true && \
     gcloud config set component_manager/disable_update_check true && \
     gcloud config set metrics/environment github_docker_image && \
-    gcloud config set compute/region europe-west3 && \
-    gcloud config set compute/region europe-west3 && \
     gcloud --version && \
     kubectl version --client
 
